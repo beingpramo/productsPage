@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Products page</title>
+</head>
+<body>
+ <div class="form-div">
+    <form id="search-form">
+        <input type="text" id="title" placeholder="Search by title" onchange="filterBySearch()">
+        <select id="category" onchange="sortByCategory(); sortByCategoryAndRatingAndOrdering();" >
+          <option value="">Filter by Category</option>
+          <option value="men's clothing">men's clothing</option>
+          <option value="women's clothing">women's clothing</option>
+          <option value="electronics">electronics</option>
+          <option value="jewelery">jewelery</option>
+        </select>
+        <select id="rating" onchange="sortByRating(); sortByCategoryAndRatingAndOrdering();">
+          <option value="">Filter by Rating</option>
+          <option value="5">5 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="2">2 Stars</option>
+          <option value="1">1 Star</option>
+        </select>
+        <select id="order" onchange="sortByOrder(); sortByCategoryAndRatingAndOrdering();">
+          <option value="">Order by</option>
+          <option value="rating_desc">Highest Rated</option>
+          <option value="rating_asc">Lowest Rated</option>
+        </select>
+        <input type="submit" value="Search" onclick="submitForm()">
+      </form>
+    </div>  
+
+    <div id="results">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+  
